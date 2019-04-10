@@ -12,8 +12,10 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C
 # apt-get update
 sudo apt-get update -y
 
+sudo -v
+
 # install 
-sudo apt-get install ros-kinetic-desktop-full -y
+sudo apt-get install -y ros-kinetic-desktop-full
 
 # init ROS
 sudo rosdep init
@@ -25,4 +27,4 @@ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 . ~/.bashrc
 
 # install dependency
-sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
+sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
