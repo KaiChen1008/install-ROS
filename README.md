@@ -14,3 +14,4 @@ chmod install-ROS.sh
 ./install-ROS.sh
 ```
 
+ps. it may take 10 ~ 20 mins for installation
