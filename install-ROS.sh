@@ -16,6 +16,7 @@ sudo -v
 
 # install 
 sudo apt-get install -y ros-kinetic-desktop-full
+sudo apt-get install -y doxygen
 
 # init ROS
 sudo rosdep init
