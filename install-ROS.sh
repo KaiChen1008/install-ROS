@@ -16,7 +16,14 @@ sudo -v
 
 # install 
 sudo apt-get install -y ros-kinetic-desktop-full
-sudo apt-get install -y doxygen
+sudo apt-get install -y doxygen\
+						pip\
+						pip3
+
+# install catkin_pkg
+pip install catkin_pkg
+pip3 install catkin_pkg
+
 
 # init ROS
 sudo rosdep init
