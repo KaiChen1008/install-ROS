@@ -7,7 +7,7 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 
 # Set up your keys
 # if you get problem see : http://wiki.ros.org/kinetic/Installation/Ubuntu
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 
 # apt-get update
 sudo apt-get update -y
@@ -31,8 +31,8 @@ rosdep update
 
 
 # enviroment setup
-echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-. ~/.bashrc
+#echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+#. ~/.bashrc
 
 # install dependency
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
