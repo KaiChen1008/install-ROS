@@ -1,13 +1,26 @@
 #!/bin/bash
 
+KEYGEN=$1
+
 sudo -v
+
+help () {
+	printf "Usage: $0 ROS-Keygen\n"
+	printf "\n"
+	printf "You can get the keygen from ROS webpage"
+}
+
+#if $KEYGEN; then
+#	printf "ROS key is not specified\n\n"
+#	help
+#fi
 
 # Setup your computer to accept software from packages.ros.org
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
 # Set up your keys
 # if you get problem see : http://wiki.ros.org/kinetic/Installation/Ubuntu
-sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key ${KEYGEN}
 
 # apt-get update
 sudo apt-get update -y
