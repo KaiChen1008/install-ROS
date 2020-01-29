@@ -2,19 +2,20 @@
 
 KEYGEN=$1
 
-sudo -v
-
 help () {
 	printf "Usage: $0 ROS-Keygen\n"
-	printf "\n"
-	printf "You can get the keygen from ROS webpage"
+	printf "You can get the keygen from ROS webpage\n\n"
+	exit 1
 }
 
-#if $KEYGEN; then
-#	printf "ROS key is not specified\n\n"
-#	help
-#fi
+if [[ -z "${KEYGEN}" ]]; then
+	printf "Please enter the ROS keygen\n\n"
+	help
+fi
 
+printf "Start intalling ROS-melodic"
+
+sudo -v
 # Setup your computer to accept software from packages.ros.org
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
@@ -44,8 +45,8 @@ rosdep update
 
 
 # enviroment setup
-#echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-#. ~/.bashrc
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+. ~/.bashrc
 
 # install dependency
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
