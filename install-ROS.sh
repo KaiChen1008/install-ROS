@@ -30,8 +30,8 @@ sudo -v
 
 # install 
 sudo apt-get install -y ros-melodic-desktop-full
-sudo apt-get install -y doxygen\
-						pip\
+sudo apt-get install -y doxygen \
+						pip \
 						pip3
 
 # install catkin_pkg
